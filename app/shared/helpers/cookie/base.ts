@@ -1,8 +1,8 @@
-import encoderDecoder from "shared/helpers/encoderDecoder";
+import encoderDecoder from "@shared/helpers/encoderDecoder";
 import {
   DeleteCookieFunction, DeleteCookiesFunction,
   GetCookieFunction, SetCookieFunction, SetCookiesFunction
-} from "@shared/helpers/cookie/model";
+} from "./model";
 
 const isBrowser = typeof window !== "undefined";
 
