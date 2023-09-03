@@ -1,1 +1,1 @@
-export const USER: "USER" = "USER";
+export const USER = "USER" as const;

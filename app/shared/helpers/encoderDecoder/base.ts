@@ -15,11 +15,11 @@ class StringEncoderDecoder {
     return StringEncoderDecoder.instance;
   }
 
-  public encode(str: string) {
+  public encode(str: string): string {
     return CryptoJS.AES.encrypt(str, this.secretKey).toString();
   }
 
-  public decode(str: string) {
+  public decode(str: string): string {
     const bytes = CryptoJS.AES.decrypt(str, this.secretKey);
     return bytes.toString(CryptoJS.enc.Utf8);
   }
