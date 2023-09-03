@@ -1,3 +1,3 @@
 export const panel = {
-  dashboard: '/panel/dashboard',
-}
+  dashboard: "/panel/dashboard"
+};

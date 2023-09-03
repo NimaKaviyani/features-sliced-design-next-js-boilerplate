@@ -1,12 +1,14 @@
 {
-  "name": "eoap-backoffice",
+  "name": "feature-sliced-design-next-js-boilerplate",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky install && ./husky.sh"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -32,10 +34,13 @@
     "zustand": "^4.4.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "@types/crypto-js": "^4.1.1",
     "@types/node": "20.5.8",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
-    "prettier": "3.0.3"
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1"
   }
 }

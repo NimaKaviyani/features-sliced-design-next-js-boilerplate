@@ -1,3 +1,3 @@
-export * from './auth';
-export * from './panel';
-export const baseRoute = '/';
+export * from "./auth";
+export * from "./panel";
+export const baseRoute = "/";
