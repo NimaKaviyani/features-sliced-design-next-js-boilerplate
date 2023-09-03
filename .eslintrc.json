@@ -16,34 +16,20 @@
   ],
   "rules": {
     "no-shadow": "off",
-    "@typescript-eslint/no-shadow": [
-      "error"
-    ],
     "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": [
-      "error"
-    ],
-    "react/jsx-filename-extension": [
-      1,
-      {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
-      }
-    ],
-    "react/react-in-jsx-scope": "off",
-    "react/jsx-uses-react": "off",
     // typescript
     "@typescript-eslint/no-explicit-any": ["error", { "ignoreRestArgs": true }],
     "@typescript-eslint/explicit-function-return-type": ["error"],
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/no-shadow": ["error"],
     // next
     "@next/next/no-html-link-for-pages": "off",
     // react
     "react/function-component-definition": "off",
-    "react/jsx-props-no-spreading": "off"
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx", ".ts", ".tsx"]}]
   },
   "env": {
     "browser": true,
