@@ -8,5 +8,6 @@
     "bracketSpacing": true,
     "arrowParens": "avoid",
     "proseWrap": "never",
-    "requirePragma": false
+    "requirePragma": false,
+    "endOfLine": "crlf"
 }
