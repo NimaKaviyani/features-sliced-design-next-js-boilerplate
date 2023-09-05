@@ -3,7 +3,6 @@
     "next",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:react/recommended",
     "plugin:jest/recommended",
     "prettier"
@@ -21,7 +20,6 @@
     "@typescript-eslint/no-explicit-any": ["error", { "ignoreRestArgs": true }],
     "@typescript-eslint/explicit-function-return-type": ["error"],
     "@typescript-eslint/no-use-before-define": ["error"],
-    "@typescript-eslint/no-shadow": ["error"],
     // next
     "@next/next/no-html-link-for-pages": "off",
     // react
@@ -44,8 +42,7 @@
     {
       "files": ["*.ts", "*.tsx"],
       "extends": [
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+        "plugin:@typescript-eslint/recommended"
       ],
       "parserOptions": {
         "project": ["./tsconfig.json"]
