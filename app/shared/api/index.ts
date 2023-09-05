@@ -1,1 +1,1 @@
-export * from "@shared/api/eoap";
+export * from "@shared/api/ens";

@@ -4,7 +4,7 @@ import toastAlert from "@shared/helpers/toast";
 import { log } from "@shared/helpers";
 import cookie from "@shared/helpers/cookie";
 import { REFRESH_TOKEN, USER_TOKEN } from "@shared/helpers/cookie/types";
-import { OptionsTypes } from "@shared/api/eoap/models";
+import { OptionsTypes } from "@shared/api/ens/models";
 import { authAddresses } from "@shared/constants/relative-url";
 
 const base = (authorization: boolean = false): AxiosInstance => {

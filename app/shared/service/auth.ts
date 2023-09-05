@@ -1,4 +1,4 @@
-import { apiInstance } from "@shared/api/eoap";
+import { apiInstance } from "@shared/api/ens";
 import { authAddresses } from "@shared/constants/relative-url";
 import { LoginRequest } from "./models";
 
