@@ -1,3 +1,4 @@
 export const authAddresses = {
-  login: "/login"
+  login: "/login",
+  refreshToken: "/refreshToken"
 };
