@@ -1,9 +1,16 @@
 import "@app/_styles/globals.scss";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Vazirmatn } from "next/font/google";
 import { ReactNode } from "react";
+import { MantineProvider } from "@mantine/core";
+import { ToastContainer } from "react-toastify";
 
-const inter = Inter({ subsets: ["latin"] });
+const vazirmatn = Vazirmatn({
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["arabic", "latin"],
+  variable: "--font-vazirmatn",
+  display: "swap"
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -12,8 +19,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }): ReactNode {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <MantineProvider theme={{ fontFamily: "Open Sans" }} withGlobalStyles withNormalizeCSS>
+      <ToastContainer rtl={false} pauseOnFocusLoss className={vazirmatn.className} />
+      <html lang="en" className={`${vazirmatn.variable}`}>
+        <body className={vazirmatn.className}>{children}</body>
+      </html>
+    </MantineProvider>
   );
 }
