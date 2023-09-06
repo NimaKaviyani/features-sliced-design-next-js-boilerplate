@@ -2,7 +2,7 @@
 import React, { ReactNode } from "react";
 import { Container, Grid, ActionIcon, useMantineColorScheme, Box, MantineTheme, CSSObject } from "@mantine/core";
 import { IconSun, IconMoonStars } from "@tabler/icons-react";
-import { global } from "@shared/i18n/locales/fa";
+import { globalLanguage } from "@shared/i18n/locales/fa";
 
 const Layout = ({ children }: { children: ReactNode }): ReactNode => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
@@ -34,7 +34,7 @@ const Layout = ({ children }: { children: ReactNode }): ReactNode => {
                 backgroundColor: theme.colorScheme === "dark" ? theme.colors.dark[6] : ""
               })}
             >
-              {global.copyright}
+              {globalLanguage.copyright}
             </Box>
           </Grid.Col>
         </Grid>

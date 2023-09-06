@@ -2,7 +2,7 @@ import "@app/styles/globals.scss";
 import type { Metadata } from "next";
 import { Vazirmatn } from "next/font/google";
 import { ReactNode } from "react";
-import { global } from "@shared/i18n/locales/fa";
+import { globalLanguage } from "@shared/i18n/locales/fa";
 import EmotionProvider from "@app/providers/emotion";
 
 const vazirmatn = Vazirmatn({
@@ -13,8 +13,8 @@ const vazirmatn = Vazirmatn({
 });
 
 export const metadata: Metadata = {
-  title: global.title,
-  description: global.description
+  title: globalLanguage.title,
+  description: globalLanguage.description
 };
 
 export default function RootLayout({ children }: { children: ReactNode }): ReactNode {

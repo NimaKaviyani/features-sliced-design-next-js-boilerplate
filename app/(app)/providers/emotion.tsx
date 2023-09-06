@@ -9,7 +9,7 @@ import cookieManager from "@shared/helpers/cookie";
 
 const vazirmatn = Vazirmatn({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["arabic", "latin"],
+  subsets: ["arabic"],
   variable: "--font-vazirmatn",
   display: "swap"
 });
@@ -36,7 +36,7 @@ export default function EmotionProvider({ children }: { children: ReactNode }): 
           theme={{
             dir: "rtl",
             colorScheme,
-            fontFamily: vazirmatn.variable
+            fontFamily: `${vazirmatn.style.fontFamily}`
           }}
           withGlobalStyles
           withNormalizeCSS
