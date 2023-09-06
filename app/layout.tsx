@@ -19,8 +19,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }): ReactNode {
   return (
-    <html lang="en" className={`${vazirmatn.variable}`}>
-      <body className={vazirmatn.className}>
+    <html lang="fa" dir="rtl" className={`${vazirmatn.variable}`}>
+      <body className={`min-h-screen ${vazirmatn.className}`}>
         <EmotionProvider>{children}</EmotionProvider>
       </body>
     </html>
