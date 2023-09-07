@@ -26,6 +26,7 @@ export default function UserSidebar(): ReactNode {
         }}
       >
         <Group>
+          {/**/}
           {/* todo: if user have avatar fill src attr */}
           <Avatar src="" radius="xl" />
           <Box sx={{ flex: 1 }}>
