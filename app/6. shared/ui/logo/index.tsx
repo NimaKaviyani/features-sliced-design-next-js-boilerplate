@@ -1,7 +1,9 @@
 import { ReactElement } from "react";
-import { ColorScheme, rem } from "@mantine/core";
+import { rem, useMantineColorScheme } from "@mantine/core";
 
-export default function Logo({ colorScheme }: { colorScheme: ColorScheme }): ReactElement {
+export default function Logo(): ReactElement {
+  const { colorScheme } = useMantineColorScheme();
+
   return (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 623 163" width={rem(100)}>
       <path

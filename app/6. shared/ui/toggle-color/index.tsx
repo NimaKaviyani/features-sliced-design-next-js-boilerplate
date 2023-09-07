@@ -11,7 +11,6 @@ const ToggleColor = (): ReactNode => {
       color={dark ? "yellow" : "blue"}
       onClick={(): unknown => toggleColorScheme()}
       title="Toggle color scheme"
-      className="me-3"
     >
       {dark ? <IconSun size="1.1rem" /> : <IconMoonStars size="1.1rem" />}
     </ActionIcon>
