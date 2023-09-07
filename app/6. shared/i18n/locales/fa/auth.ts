@@ -7,3 +7,5 @@ export const loginLanguage = {
   saveSession: "مرا به خاطر بسپار",
   submit: "ورود"
 };
+
+export const registerLanguage = {};

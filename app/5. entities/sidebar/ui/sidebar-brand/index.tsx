@@ -15,7 +15,7 @@ const SidebarBrand = (): ReactNode => {
       })}
     >
       <Group position="apart">
-        <Logo colorScheme={colorScheme} />
+        <Logo />
         <ActionIcon variant="default" onClick={(): void => toggleColorScheme()} size={30}>
           {colorScheme === "dark" ? <IconSun size="1rem" /> : <IconMoonStars size="1rem" />}
         </ActionIcon>
