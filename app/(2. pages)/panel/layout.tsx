@@ -1,10 +1,10 @@
 "use client";
 import React, { ReactNode } from "react";
-import { AppShell, Navbar, Header, MantineTheme, CSSObject, Grid } from "@mantine/core";
+import { AppShell, Navbar, Header, MantineTheme, CSSObject } from "@mantine/core";
 import PanelNavbar from "@widgets/panel/panel-navbar";
 import PanelHeader from "@widgets/panel/panel-header";
 
-const Layout = (): ReactNode => {
+const Layout = ({ children }: { children: ReactNode }): ReactNode => {
   return (
     <AppShell
       padding="md"
@@ -22,12 +22,8 @@ const Layout = (): ReactNode => {
         main: { backgroundColor: theme.colorScheme === "dark" ? theme.colors.dark[8] : theme.colors.gray[0] }
       })}
     >
-      {/* Your application here */}
-      <Grid>
-        <Grid.Col span={4}>Column 1</Grid.Col>
-        <Grid.Col span={4}>Column 2</Grid.Col>
-        <Grid.Col span={4}>Column 3</Grid.Col>
-      </Grid>
+      {/* todo: add breadcrumb */}
+      {children}
     </AppShell>
   );
 };
