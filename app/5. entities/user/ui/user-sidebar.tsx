@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import { IconChevronRight, IconChevronLeft } from "@tabler/icons-react";
 import { UnstyledButton, Group, Avatar, Text, Box, useMantineTheme, rem } from "@mantine/core";
 
-export function UserSidebar(): ReactNode {
+export default function UserSidebar(): ReactNode {
   const theme = useMantineTheme();
 
   return (

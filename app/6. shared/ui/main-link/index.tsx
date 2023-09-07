@@ -1,6 +1,11 @@
-import { MainLinkProps } from "@entities/sidebar-links/model";
 import React, { ReactNode } from "react";
 import { CSSObject, Group, MantineTheme, Text, ThemeIcon, UnstyledButton } from "@mantine/core";
+
+export interface MainLinkProps {
+  icon: React.ReactNode;
+  color: string;
+  label: string;
+}
 
 export default function MainLink({ icon, color, label }: MainLinkProps): ReactNode {
   return (

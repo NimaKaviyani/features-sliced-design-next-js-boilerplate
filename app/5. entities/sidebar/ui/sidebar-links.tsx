@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import { IconGitPullRequest, IconAlertCircle, IconMessages, IconDatabase } from "@tabler/icons-react";
-import MainLink from "./ui/main-link";
+import MainLink from "@shared/ui/main-link";
 
 const data = [
   { icon: <IconGitPullRequest size="1rem" />, color: "blue", label: "Pull Requests" },
