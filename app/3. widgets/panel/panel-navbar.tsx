@@ -1,15 +1,18 @@
 import React, { ReactNode } from "react";
 import { Navbar, ScrollArea } from "@mantine/core";
-import { MainLinks } from "@entities/sidebar/main-links";
+import SidebarLinks from "@entities/sidebar-links";
+import { UserSidebar } from "@entities/user-sidebar";
 
 const PanelNavbar = (): ReactNode => {
   return (
     <>
       <Navbar.Section mt="xs">{/* Header with logo */}</Navbar.Section>
       <Navbar.Section grow component={ScrollArea} mx="-xs" px="xs">
-        <MainLinks />
+        <SidebarLinks />
       </Navbar.Section>
-      <Navbar.Section>{/* Footer with user */}</Navbar.Section>
+      <Navbar.Section>
+        <UserSidebar />
+      </Navbar.Section>
     </>
   );
 };
