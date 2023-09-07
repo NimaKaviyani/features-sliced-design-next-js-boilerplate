@@ -40,12 +40,17 @@
     "stylis-plugin-rtl": "^2.1.1",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2",
-    "zustand": "^4.4.1"
+    "zustand": "^4.4.1",
+    "@react-buddy/ide-toolbox-next": "^2.4.1",
+    "@react-buddy/palette-mantine-core": "^6.0.0",
+    "@react-buddy/palette-mantine-form": "^6.0.0",
+    "@react-buddy/palette-mantine-dates": "^6.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
     "@jest/globals": "^29.6.4",
+    "@react-buddy/ide-toolbox": "^2.4.0",
     "@types/crypto-js": "^4.1.1",
     "@types/jest": "^29.5.4",
     "@types/node": "20.5.8",
