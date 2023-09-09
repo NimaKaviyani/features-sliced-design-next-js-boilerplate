@@ -2,7 +2,7 @@
 import { ReactNode } from "react";
 import { Center, Box } from "@mantine/core";
 import { loginLanguage } from "@shared/i18n/locales/fa";
-import LoginForm from "@widgets/login/login-form";
+import LoginForm from "@widgets/login/ui/login-form";
 
 export default function Login(): ReactNode {
   return (

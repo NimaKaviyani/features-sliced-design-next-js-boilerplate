@@ -1,4 +1,4 @@
-import encoderDecoder from "@shared/helpers/encoderDecoder";
+import encoderDecoder from "@shared/helpers/encoder-decoder";
 import {
   DeleteCookieFunction,
   DeleteCookiesFunction,
