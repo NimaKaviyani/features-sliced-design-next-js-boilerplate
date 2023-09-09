@@ -11,8 +11,8 @@ const LoginForm = (): ReactNode => {
       saveSession: false
     },
     validate: {
-      username: value => (value.length === 0 ? null : loginLanguage.usernameValidation),
-      password: value => (value.length === 0 ? null : loginLanguage.passwordValidation)
+      username: value => (value.length !== 0 ? null : loginLanguage.usernameValidation),
+      password: value => (value.length !== 0 ? null : loginLanguage.passwordValidation)
     }
   });
   return (
