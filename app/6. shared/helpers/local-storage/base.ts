@@ -1,5 +1,5 @@
-import encoderDecoder from "@shared/helpers/encoderDecoder";
-import { GetItemFunction, RemoveItemFunction, SetItemFunction } from "@shared/helpers/localStorage/model";
+import encoderDecoder from "@shared/helpers/encoder-decoder";
+import { GetItemFunction, RemoveItemFunction, SetItemFunction } from "@shared/helpers/local-storage/model";
 
 const isBrowser = typeof window !== "undefined";
 

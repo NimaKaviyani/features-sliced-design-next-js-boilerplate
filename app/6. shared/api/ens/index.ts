@@ -6,7 +6,7 @@ import {
   PostRequestFunction,
   PutRequestFunction,
   ResponseData
-} from "@shared/api/ens/models";
+} from "@shared/api/ens/model";
 
 export const getRequest: GetRequestFunction = async (url, params, authorization): Promise<ResponseData> => {
   const response: AxiosResponse<ResponseData> = await api(authorization).get(url, { params });
