@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import { Navbar, ScrollArea } from "@mantine/core";
-import SidebarLinks from "@entities/sidebar/ui/sidebar-links";
+import SidebarLinks from "@entities/sidebar/ui/menu-lists";
 import UserSidebar from "@entities/user/ui/user-sidebar";
 // import SidebarBrand from "@entities/sidebar/ui/sidebar-brand";
 
