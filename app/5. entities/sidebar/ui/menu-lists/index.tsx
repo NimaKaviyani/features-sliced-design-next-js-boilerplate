@@ -46,7 +46,7 @@ const mockdata = [
     ],
   },
 ];
-export default function SidebarLinks(): ReactNode {
+export default function MenuLists(): ReactNode {
   const links = mockdata.map((item) => <LinksGroup icon={item.icon} label={item.label} links={item.links} key={item.label} />);
 
   return (
