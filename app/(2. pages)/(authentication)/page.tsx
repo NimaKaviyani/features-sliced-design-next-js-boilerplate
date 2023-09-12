@@ -1,8 +1,10 @@
 "use client";
 import { ReactNode } from "react";
-import { Center, Box } from "@mantine/core";
 import { loginLanguage } from "@shared/i18n/locales/fa";
 import LoginForm from "@widgets/login/ui/login-form";
+import Box from "@shared/ui/mantine-wrapper/box";
+import Center from "@shared/ui/mantine-wrapper/center";
+
 
 export default function Login(): ReactNode {
   return (

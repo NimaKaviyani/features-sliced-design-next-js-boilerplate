@@ -1,22 +1,26 @@
 import React, { ReactNode } from "react";
-import { Grid, Box, MantineTheme, CSSObject } from "@mantine/core";
+import { MantineTheme, CSSObject } from "@mantine/core";
 import { globalLanguage } from "@shared/i18n/locales/fa";
 import ToggleColor from "@shared/ui/toggle-color";
 import Container from "@shared/ui/mantine-wrapper/container";
+import Grid from "@shared/ui/mantine-wrapper/grid";
+import Col from "@shared/ui/mantine-wrapper/col";
+import Box from "@shared/ui/mantine-wrapper/box";
+
+
 const Layout = ({ children }: { children: ReactNode }): ReactNode => {
   return (
     <main>
       <Container fluid>
         <Grid className="min-h-screen flex-col">
-          <Grid.Col span={12}>
+          <Col span={12}>
             <Box className="h-16 flex items-center justify-end">
               <ToggleColor />
             </Box>
-          </Grid.Col>
-          <Grid.Col span={12}>{children}</Grid.Col>
-          <Grid.Col span={12} className="mt-auto">
+          </Col>
+          <Col span={12}>{children}</Col>
+          <Col span={12} className="mt-auto">
             <Box
-              component="footer"
               className="h-16 flex items-center justify-center"
               sx={(theme: MantineTheme): CSSObject => ({
                 backgroundColor: theme.colorScheme === "dark" ? theme.colors.dark[6] : ""
@@ -24,7 +28,7 @@ const Layout = ({ children }: { children: ReactNode }): ReactNode => {
             >
               {globalLanguage.copyright}
             </Box>
-          </Grid.Col>
+          </Col>
         </Grid>
       </Container>
     </main>
@@ -32,3 +36,4 @@ const Layout = ({ children }: { children: ReactNode }): ReactNode => {
 };
 
 export default Layout;
+
