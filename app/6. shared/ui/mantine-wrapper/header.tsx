@@ -1,3 +1,4 @@
+"use client";
 import { ReactNode } from "react";
 import { Header as MantineHeader } from "@mantine/core";
 import { HeaderProps } from "@mantine/core/lib/AppShell/Header/Header";

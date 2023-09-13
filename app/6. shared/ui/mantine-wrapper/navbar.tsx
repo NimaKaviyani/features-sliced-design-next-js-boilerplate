@@ -1,3 +1,4 @@
+"use client";
 import { ReactNode } from "react";
 import { Navbar as MantineNavbar } from "@mantine/core";
 import { NavbarProps } from "@mantine/core/lib/AppShell/Navbar/Navbar";

@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
-import { Group } from "@mantine/core";
 import ToggleColor from "@shared/ui/toggle-color";
 import Brand from "@entities/header/ui/brand";
+import Group from "@shared/ui/mantine-wrapper/Group";
 
 const PanelHeader = (): ReactNode => {
   return (

@@ -1,7 +1,12 @@
-import { ReactNode } from "react";
-import { Button, Checkbox, Group, TextInput } from "@mantine/core";
+'use client'
+import TextInput from "@shared/ui/mantine-wrapper/text-input";
+import CheckBox from "@shared/ui/mantine-wrapper/checkbox";
 import { loginLanguage } from "@shared/i18n/locales/fa";
+import Group from "@shared/ui/mantine-wrapper/Group";
+import Button from "@shared/ui/mantine-wrapper/button";
 import { useForm } from "@mantine/form";
+import { ReactNode } from "react";
+
 
 const LoginForm = (): ReactNode => {
   const form = useForm({
@@ -30,7 +35,7 @@ const LoginForm = (): ReactNode => {
         placeholder={loginLanguage.password}
         {...form.getInputProps("password")}
       />
-      <Checkbox
+      <CheckBox
         mt="md"
         label={loginLanguage.saveSession}
         {...form.getInputProps("saveSession", { type: "checkbox" })}

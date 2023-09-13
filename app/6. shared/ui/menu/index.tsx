@@ -1,3 +1,4 @@
+"use client";
 import { ReactNode, useState } from "react";
 import { Group, Box, Collapse, ThemeIcon, Text, MantineTheme, CSSObject, UnstyledButton, rem } from "@mantine/core";
 import { IconChevronLeft, IconCalendarStats } from "@tabler/icons-react";

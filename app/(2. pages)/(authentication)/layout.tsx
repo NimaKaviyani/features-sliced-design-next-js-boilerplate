@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { MantineTheme, CSSObject } from "@mantine/core";
+import { MantineTheme, CSSObject } from "@shared/model/index";
 import { globalLanguage } from "@shared/i18n/locales/fa";
 import ToggleColor from "@shared/ui/toggle-color";
 import Container from "@shared/ui/mantine-wrapper/container";

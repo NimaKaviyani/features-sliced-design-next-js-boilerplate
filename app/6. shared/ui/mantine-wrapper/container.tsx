@@ -1,3 +1,4 @@
+"use client";
 import { ReactNode } from "react";
 import { Container as MantineContainer } from "@mantine/core";
 import { ContainerProps } from "@mantine/core/lib/Container/Container";

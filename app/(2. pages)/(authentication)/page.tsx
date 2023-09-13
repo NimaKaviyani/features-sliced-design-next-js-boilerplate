@@ -1,4 +1,3 @@
-"use client";
 import { ReactNode } from "react";
 import { loginLanguage } from "@shared/i18n/locales/fa";
 import LoginForm from "@widgets/login/ui/login-form";
