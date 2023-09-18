@@ -1,3 +1,4 @@
+"use client";
 import React, { ReactNode } from "react";
 import ToggleColor from "@shared/ui/toggle-color";
 import { globalLanguage } from "@shared/i18n/locales/fa";
