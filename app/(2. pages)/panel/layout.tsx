@@ -1,8 +1,8 @@
 "use client";
 import React, { ReactNode } from "react";
-import { AppShell, Navbar, Header, MantineTheme, CSSObject } from "@mantine/core";
-import PanelNavbar from "@/3. widgets/panel/ui/panel-sidebar";
 import PanelHeader from "@widgets/panel/ui/panel-header";
+import PanelNavbar from "@widgets/panel/ui/panel-sidebar";
+import { AppShell, Navbar, Header, MantineTheme, CSSObject } from "@mantine/core";
 
 const Layout = ({ children }: { children: ReactNode }): ReactNode => {
   return (
