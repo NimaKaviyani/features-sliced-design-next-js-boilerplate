@@ -2,7 +2,7 @@
 import React, { ReactNode } from "react";
 import ToggleColor from "@shared/ui/toggle-color";
 import { globalLanguage } from "@shared/i18n/locales/fa";
-import { Container,Grid, Box, MantineTheme, CSSObject } from "@mantine/core";
+import { Container, Grid, Box, MantineTheme, CSSObject } from "@mantine/core";
 const Layout = ({ children }: { children: ReactNode }): ReactNode => {
   return (
     <main>
