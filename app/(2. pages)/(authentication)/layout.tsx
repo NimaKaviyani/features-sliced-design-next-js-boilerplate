@@ -1,8 +1,7 @@
 import React, { ReactNode } from "react";
-import { Grid, Box, MantineTheme, CSSObject } from "@mantine/core";
-import { globalLanguage } from "@shared/i18n/locales/fa";
 import ToggleColor from "@shared/ui/toggle-color";
-import Container from "@shared/ui/mantine-wrapper/container";
+import { globalLanguage } from "@shared/i18n/locales/fa";
+import { Container,Grid, Box, MantineTheme, CSSObject } from "@mantine/core";
 const Layout = ({ children }: { children: ReactNode }): ReactNode => {
   return (
     <main>

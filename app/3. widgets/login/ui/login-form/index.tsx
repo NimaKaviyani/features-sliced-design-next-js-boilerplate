@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
-import { Button, Checkbox, Group, TextInput } from "@mantine/core";
-import { loginLanguage } from "@shared/i18n/locales/fa";
 import { useForm } from "@mantine/form";
+import { loginLanguage } from "@shared/i18n/locales/fa";
+import { Button, Checkbox, Group, TextInput } from "@mantine/core";
 
 const LoginForm = (): ReactNode => {
   const form = useForm({
