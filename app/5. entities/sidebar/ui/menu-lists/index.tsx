@@ -1,21 +1,22 @@
 import React, { ReactNode } from "react";
 import { IconUsersPlus, IconLayoutDashboard,IconMail} from "@tabler/icons-react";
 import { LinksGroup } from "@shared/ui/menu";
+import { sidebarLanguage } from "@shared/i18n/locales/fa/panel/dashboard";
 
 /* todo: change with real data */
 const mockdata = [
-  { label: "داشبورد", icon: IconLayoutDashboard, links: "/panel/dashboard" },
+  { label: sidebarLanguage.dashboard, icon: IconLayoutDashboard,  links: "/panel/dashboard" },
   {
-    label: "مشترکین",
+    label: sidebarLanguage.subscribe.label,
     icon: IconUsersPlus,
     initiallyOpened: true,
-    subMenus: [{ label: "مدیریت مشترکین", link: "/panel/subscriber/subscriber-management" }]
+    subMenus: [{ label: sidebarLanguage.subscribe.management, link: "/panel/subscriber/subscriber-management" }]
   },
   {
-    label: "پیامک",
+    label: sidebarLanguage.sms.label,
     icon: IconMail,
     initiallyOpened: true,
-    subMenus: [{ label: "صندوق ارسال پیامک تک", link: "/panel/sms/single-sms" },{ label: "صندوق ارسال پیامک انبوه", link: "/panel/sms/bulk-sms" }]
+    subMenus: [{ label: sidebarLanguage.sms.single , link: "/panel/sms/single-sms" },{ label:sidebarLanguage.sms.bulk, link: "/panel/sms/bulk-sms" }]
   }
 ];
 export default function MenuLists(): ReactNode {
