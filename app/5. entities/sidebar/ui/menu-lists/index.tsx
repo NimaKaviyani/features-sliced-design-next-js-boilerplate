@@ -1,11 +1,11 @@
 import React, { ReactNode } from "react";
-import { IconUsersPlus, IconLayoutDashboard,IconMail} from "@tabler/icons-react";
+import { IconUsersPlus, IconLayoutDashboard, IconMail } from "@tabler/icons-react";
 import { LinksGroup } from "@shared/ui/menu";
 import { sidebarLanguage } from "@shared/i18n/locales/fa";
 
 /* todo: change with real data */
 const mockdata = [
-  { label: sidebarLanguage.dashboard, icon: IconLayoutDashboard,  links: "/panel/dashboard" },
+  { label: sidebarLanguage.dashboard, icon: IconLayoutDashboard, links: "/panel/dashboard" },
   {
     label: sidebarLanguage.subscribe.label,
     icon: IconUsersPlus,
@@ -16,7 +16,10 @@ const mockdata = [
     label: sidebarLanguage.sms.label,
     icon: IconMail,
     initiallyOpened: true,
-    subMenus: [{ label: sidebarLanguage.sms.single , link: "/panel/sms/single-sms" },{ label:sidebarLanguage.sms.bulk, link: "/panel/sms/bulk-sms" }]
+    subMenus: [
+      { label: sidebarLanguage.sms.single, link: "/panel/sms/single-sms" },
+      { label: sidebarLanguage.sms.bulk, link: "/panel/sms/bulk-sms" }
+    ]
   }
 ];
 export default function MenuLists(): ReactNode {
