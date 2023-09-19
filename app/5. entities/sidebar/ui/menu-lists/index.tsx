@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import { IconUsersPlus, IconLayoutDashboard,IconMail} from "@tabler/icons-react";
 import { LinksGroup } from "@shared/ui/menu";
-import { sidebarLanguage } from "@shared/i18n/locales/fa/panel/dashboard";
+import { sidebarLanguage } from "@shared/i18n/locales/fa";
 
 /* todo: change with real data */
 const mockdata = [
