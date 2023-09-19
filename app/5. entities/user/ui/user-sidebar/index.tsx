@@ -31,10 +31,10 @@ export default function UserSidebar(): ReactNode {
           <Avatar src="" radius="xl" />
           <Box sx={{ flex: 1 }}>
             <Text size="sm" weight={500}>
-              Amy Horsefighter
+              m.davarzani
             </Text>
             <Text color="dimmed" size="xs">
-              ahorsefighter@gmail.com
+              m.davarzani@asax.ir
             </Text>
           </Box>
           {theme.dir === "ltr" ? <IconChevronRight size={rem(18)} /> : <IconChevronLeft size={rem(18)} />}
