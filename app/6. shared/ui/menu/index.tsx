@@ -1,21 +1,22 @@
 import { ReactNode, useState } from "react";
 import { Group, Box, Collapse, ThemeIcon, Text, MantineTheme, CSSObject, UnstyledButton, rem } from "@mantine/core";
-import { IconChevronLeft, IconCalendarStats } from "@tabler/icons-react";
+import { IconChevronLeft } from "@tabler/icons-react";
+import Link from "next/link";
 
 interface LinksGroupProps {
   icon: React.FC;
   label: string;
+  links?: string;
   initiallyOpened?: boolean;
-  links?: { label: string; link: string }[];
+  subMenus?: { label: string; link: string }[];
 }
 
-export function LinksGroup({ icon: Icon, label, initiallyOpened, links }: LinksGroupProps): ReactNode {
-  const hasLinks = Array.isArray(links);
+export function LinksGroup({ icon: Icon, label, initiallyOpened, links, subMenus }: LinksGroupProps): ReactNode {
+  const hasLinks = Array.isArray(subMenus);
   const [opened, setOpened] = useState(initiallyOpened || false);
 
-  const items = (hasLinks ? links : []).map(link => (
-    <Text<"a">
-      component="a"
+  const items = (hasLinks ? subMenus : []).map(subMenu => (
+    <Text
       sx={(theme: MantineTheme): CSSObject => ({
         fontWeight: 500,
         display: "block",
@@ -32,11 +33,10 @@ export function LinksGroup({ icon: Icon, label, initiallyOpened, links }: LinksG
           color: theme.colorScheme === "dark" ? theme.white : theme.black
         }
       })}
-      href={link.link}
-      key={link.label}
+      key={subMenu.label}
       onClick={(event): void => event.preventDefault()}
     >
-      {link.label}
+      <Link href={subMenu.link}>{subMenu.label}</Link>
     </Text>
   ));
 
@@ -60,10 +60,10 @@ export function LinksGroup({ icon: Icon, label, initiallyOpened, links }: LinksG
       >
         <Group position="apart" spacing={0}>
           <Box sx={{ display: "flex", alignItems: "center" }}>
-            <ThemeIcon variant="light" size={30}>
+            <ThemeIcon variant="none" size={30}>
               <Icon />
             </ThemeIcon>
-            <Box ml="md">{label}</Box>
+            <Box ml="md">{links ? <Link href={links}>{label}</Link> : label}</Box>
           </Box>
           {hasLinks && (
             <IconChevronLeft
@@ -79,28 +79,5 @@ export function LinksGroup({ icon: Icon, label, initiallyOpened, links }: LinksG
       </UnstyledButton>
       {hasLinks ? <Collapse in={opened}>{items}</Collapse> : null}
     </>
-  );
-}
-const mockdata = {
-  label: "Releases",
-  icon: IconCalendarStats,
-  links: [
-    { label: "Upcoming releases", link: "/" },
-    { label: "Previous releases", link: "/" },
-    { label: "Releases schedule", link: "/" }
-  ]
-};
-
-export function NavbarLinksGroup(): ReactNode {
-  return (
-    <Box
-      sx={(theme: MantineTheme): CSSObject => ({
-        minHeight: rem(220),
-        padding: theme.spacing.md,
-        backgroundColor: theme.colorScheme === "dark" ? theme.colors.dark[6] : theme.white
-      })}
-    >
-      <LinksGroup {...mockdata} />
-    </Box>
   );
 }
