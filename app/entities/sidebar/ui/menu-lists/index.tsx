@@ -4,7 +4,7 @@ import { LinksGroup } from "@shared/ui/menu";
 import { sidebarLanguage } from "@shared/i18n/locales/fa";
 
 /* todo: change with real data */
-const mockdata = [
+const mockData = [
   { label: sidebarLanguage.dashboard, icon: IconLayoutDashboard, links: "/panel/dashboard" },
   {
     label: sidebarLanguage.subscribe.label,
@@ -23,9 +23,11 @@ const mockdata = [
   }
 ];
 export default function MenuLists(): ReactNode {
-  const links = mockdata.map(item => (
-    <LinksGroup icon={item.icon} label={item.label} subMenus={item.subMenus} key={item.label} links={item.links} />
-  ));
-
-  return <div>{links}</div>;
+  return (
+    <div>
+      {mockData.map(item => (
+        <LinksGroup icon={item.icon} label={item.label} subMenus={item.subMenus} key={item.label} links={item.links} />
+      ))}
+    </div>
+  );
 }
