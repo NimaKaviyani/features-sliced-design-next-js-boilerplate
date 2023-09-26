@@ -1,9 +1,13 @@
-import { create } from 'zustand';
+import { create } from "zustand";
+
 interface Tags {
-    tags: string[],
-    pushTags: (value:string)=>void
+  tags: string[];
+  addTag: (tag: string) => void;
+  removeTag: (tag: string) => void;
 }
-const useTags = create<Tags>((set) => ({
-    tags: [],
-    pushTags: (payload:string)=>set((state)=>({tags:state.tags([...state.tags,payload])}))
-  }))
+
+export const useTags = create<Tags>(set => ({
+  tags: [],
+  addTag: (tag): void => set(prevState => ({ tags: [...prevState.tags, tag] })),
+  removeTag: (tag): void => set(prevState => ({ tags: prevState.tags.filter(item => item !== tag) }))
+}));
