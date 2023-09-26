@@ -1,8 +1,9 @@
 "use client";
 import React, { ReactNode } from "react";
-import { Grid } from "@mantine/core";
+import { Badge, Grid } from "@mantine/core";
 import AddTags from "@/features/single-sms/add-tags";
 import LabelInput from "@/entities/single-sms/ui/label";
+import Tags from "@entities/single-sms/ui/tags";
 
 const SingleSmsWidget = (): ReactNode => {
   return (
@@ -15,6 +16,11 @@ const SingleSmsWidget = (): ReactNode => {
             </Grid.Col>
             <Grid.Col span={6}>
               <AddTags />
+            </Grid.Col>
+          </Grid>
+          <Grid>
+            <Grid.Col className="mt-3" span={12}>
+              <Tags />
             </Grid.Col>
           </Grid>
         </Grid.Col>
