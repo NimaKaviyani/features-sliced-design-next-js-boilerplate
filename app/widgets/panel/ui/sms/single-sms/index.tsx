@@ -4,7 +4,7 @@ import { Grid } from "@mantine/core";
 import AddTags from "@/features/single-sms/add-tags";
 import LabelInput from "@/entities/single-sms/ui/label";
 
-const SingleSmsWidget = () => {
+const SingleSmsWidget = (): ReactNode => {
   return (
     <Grid>
       <form className="flex flex-row">
@@ -24,4 +24,3 @@ const SingleSmsWidget = () => {
 };
 
 export default SingleSmsWidget;
-
