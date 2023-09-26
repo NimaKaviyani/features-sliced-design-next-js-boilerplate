@@ -2,7 +2,7 @@
 import { ReactNode } from "react";
 import { useForm } from "@mantine/form";
 import { smsLanguage } from "@shared/i18n/locales/fa";
-import { Button, Checkbox, Select, Group, TextInput, Grid } from "@mantine/core";
+import { Button, Select, Group, TextInput, Grid } from "@mantine/core";
 
 const GetUserInformation = (): ReactNode => {
   const phoneRegex = /^09[0-9]{9}$/;
@@ -10,7 +10,7 @@ const GetUserInformation = (): ReactNode => {
     initialValues: { phoneNumber: "", id: "" },
     // functions will be used to validate values at corresponding key
     validate: {
-      id:value => value.length > 0 ? null : smsLanguage.searchSms.idValidate,
+      id: value => (value.length > 0 ? null : smsLanguage.searchSms.idValidate),
       phoneNumber: value =>
         value.length > 0
           ? phoneRegex.test(value)
@@ -43,4 +43,3 @@ const GetUserInformation = (): ReactNode => {
 };
 
 export default GetUserInformation;
-

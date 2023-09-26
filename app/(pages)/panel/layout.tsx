@@ -2,7 +2,7 @@
 import React, { ReactNode } from "react";
 import PanelHeader from "@widgets/panel/ui/panel-header";
 import PanelNavbar from "@widgets/panel/ui/panel-sidebar";
-import { AppShell, Container, Navbar, Header, MantineTheme, CSSObject,  Card } from "@mantine/core";
+import { AppShell, Container, Navbar, Header, MantineTheme, CSSObject, Card } from "@mantine/core";
 
 const Layout = ({ children }: { children: ReactNode }): ReactNode => {
   return (
@@ -24,7 +24,7 @@ const Layout = ({ children }: { children: ReactNode }): ReactNode => {
     >
       {/* todo: add breadcrumb */}
       <Container my="md" fluid>
-        <Card shadow="sm" padding="lg" radius="md" withBorder >
+        <Card shadow="sm" padding="lg" radius="md" withBorder>
           {children}
         </Card>
       </Container>
@@ -32,4 +32,3 @@ const Layout = ({ children }: { children: ReactNode }): ReactNode => {
   );
 };
 export default Layout;
-

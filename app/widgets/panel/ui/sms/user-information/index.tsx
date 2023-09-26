@@ -1,13 +1,11 @@
 import { smsLanguage } from "@/shared/i18n/locales/fa";
 import { Grid } from "@mantine/core";
-import React from "react";
+import React, { ReactNode } from "react";
 
-const UserInformation = () => {
+const UserInformation = (): ReactNode => {
   return (
     <Grid>
-      <Grid.Col span={3}>
-        {smsLanguage.userInfo.nameContact}
-      </Grid.Col>
+      <Grid.Col span={3}>{smsLanguage.userInfo.nameContact}</Grid.Col>
       <Grid.Col span={3}>
         {smsLanguage.userInfo.idContact}: {}
       </Grid.Col>
@@ -34,4 +32,3 @@ const UserInformation = () => {
 };
 
 export default UserInformation;
-
