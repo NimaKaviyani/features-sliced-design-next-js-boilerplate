@@ -19,6 +19,7 @@ export const smsLanguage = {
   },
   sendSms: {
     title: "موضوع",
-    tagLabel: "افزودن تگ های پیام"
+    tagLabel: "افزودن تگ های پیام",
+    textAreaPlaceholder: "متن خود را وارد نمایید"
   }
 };

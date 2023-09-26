@@ -4,6 +4,7 @@ import { Grid } from "@mantine/core";
 import AddTags from "@/features/single-sms/add-tags";
 import LabelInput from "@/entities/single-sms/ui/label";
 import Tags from "@entities/single-sms/ui/tags";
+import TextArea from "@entities/single-sms/ui/textarea";
 
 const SingleSmsWidget = (): ReactNode => {
   return (
@@ -21,6 +22,11 @@ const SingleSmsWidget = (): ReactNode => {
           <Grid>
             <Grid.Col className="mt-3" span={12}>
               <Tags />
+            </Grid.Col>
+          </Grid>
+          <Grid>
+            <Grid.Col span={12}>
+              <TextArea />
             </Grid.Col>
           </Grid>
         </Grid.Col>
