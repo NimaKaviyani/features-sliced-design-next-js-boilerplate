@@ -10,7 +10,7 @@ const SingleSms = (): ReactNode => {
     <Grid>
       <Grid.Col>
         <h1>صندوق ارسال پیامک تک</h1>
-      <Divider my="sm" />
+        <Divider my="sm" />
       </Grid.Col>
       <Grid.Col>
         <GetUserInformation />
@@ -26,4 +26,3 @@ const SingleSms = (): ReactNode => {
 };
 
 export default SingleSms;
-
