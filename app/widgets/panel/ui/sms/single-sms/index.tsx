@@ -1,6 +1,6 @@
 "use client";
 import React, { ReactNode } from "react";
-import { Badge, Grid } from "@mantine/core";
+import { Grid } from "@mantine/core";
 import AddTags from "@/features/single-sms/add-tags";
 import LabelInput from "@/entities/single-sms/ui/label";
 import Tags from "@entities/single-sms/ui/tags";

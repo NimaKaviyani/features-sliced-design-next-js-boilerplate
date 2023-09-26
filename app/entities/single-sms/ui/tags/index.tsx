@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import { useTags } from "@shared/state-management/tags";
 import { Badge } from "@mantine/core";
 
-const Index = (): ReactNode => {
+const Tags = (): ReactNode => {
   const tags = useTags(state => state.tags);
   return (
     <>
@@ -17,4 +17,4 @@ const Index = (): ReactNode => {
   );
 };
 
-export default Index;
+export default Tags;
