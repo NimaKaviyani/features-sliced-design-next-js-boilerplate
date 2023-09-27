@@ -22,7 +22,11 @@ export const smsLanguage = {
     tagLabel: "افزودن تگ های پیام",
     errorTag: "حد مجاز افزودن به پایان رسیده است!",
     messageLang: "نوع پیام",
+    sendTitleModal: "تایید نهایی جهت ارسال!",
+    cancelTitleModal: "تایید نهایی جهت انصراف!",
     textCharacterSms: "تعداد کاراکتر های پیامک",
+    messageConfirmModal: "آیا از ارسال پیام به مخاطب مورد نظر اطمینان دارید؟",
+    messageCancelModal: "آیا از ارسال پیام منصرف شده اید؟ ",
     textAreaPlaceholder: "متن خود را وارد نمایید"
   }
 };
