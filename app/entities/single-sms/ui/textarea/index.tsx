@@ -12,7 +12,7 @@ const TextArea = (): ReactNode => {
   }
 
   const handleChange = (event: ChangeEvent<HTMLTextAreaElement>): void => {
-    if (!event.target.value || event.target.value.length === 0) return;
+    if (!event.target.value || event.target.value.length === 0) setTextSms("");
 
     setTextSms(event.target.value);
   };
@@ -32,7 +32,7 @@ const TextArea = (): ReactNode => {
         placeholder={smsLanguage.sendSms.textAreaPlaceholder}
       />
       <div className="flex items-center justify-between mt-1">
-        <p className="text-sm">{hasUnicode ? "فارسی" : "انگلیسی"}</p>
+        <p className="text-sm">{textSms.length > 0 ? (hasUnicode ? "فارسی" : "انگلیسی") : null}</p>
         <p className="text-sm text-left">
           {textSms.length > 0 ? messageCount : 0} / {textSms.length}
         </p>
