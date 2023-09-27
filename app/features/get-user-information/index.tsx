@@ -20,12 +20,12 @@ const GetUserInformation = (): ReactNode => {
     }
   });
   return (
-    <Grid>
-      <form className="flex flex-row" onSubmit={form.onSubmit(e => console.log(e))}>
-        <Grid.Col span={5}>
+    <form onSubmit={form.onSubmit(e => console.log(e))}>
+      <Grid>
+        <Grid.Col xs={12} md={4} lg={3}>
           <Select placeholder={smsLanguage.searchSms.id} data={["ads", "otp"]} {...form.getInputProps("id")} />
         </Grid.Col>
-        <Grid.Col span={5}>
+        <Grid.Col xs={12} md={4} lg={3}>
           <TextInput
             withAsterisk
             placeholder={smsLanguage.searchSms.phoneNumber}
@@ -37,8 +37,8 @@ const GetUserInformation = (): ReactNode => {
             <Button type="submit">{smsLanguage.searchSms.search}</Button>
           </Group>
         </Grid.Col>
-      </form>
-    </Grid>
+      </Grid>
+    </form>
   );
 };
 
