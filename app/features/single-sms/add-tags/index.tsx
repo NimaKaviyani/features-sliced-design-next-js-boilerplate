@@ -14,13 +14,6 @@ const AddTags = (): ReactNode => {
     addTag(selectedTag);
     setSelectedTag("");
   };
-  const handleKeyDownTag = (event: React.KeyboardEvent<HTMLInputElement>): void => {
-    if (!selectedTag || selectedTag.length === 0) return;
-    if (event.key === "Enter") {
-      addTag(selectedTag);
-    }
-    setSelectedTag("");
-  };
 
   useEffect(() => {
     console.log({ tags });
@@ -34,13 +27,10 @@ const AddTags = (): ReactNode => {
         data={["تگ1", "تگ2", "تگ3"]}
         searchable
         disabled={tags.length > 9}
-        onKeyDown={handleKeyDownTag}
         onSearchChange={setSelectedTag}
         rightSection={<IconPlus className="cursor-pointer" onClick={handleClickTag} style={{ display: undefined }} />}
       />
-      {tags.length === 10 ? (
-        <p className="text-rose-400 text-xs my-2 "> حد مجاز اضافه کردن شما به پایان رسیده است!</p>
-      ) : null}
+      {tags.length === 10 ? <p className="text-[#e03131] text-xs my-2 ">{smsLanguage.sendSms.errorTag}</p> : null}
     </>
   );
 };
