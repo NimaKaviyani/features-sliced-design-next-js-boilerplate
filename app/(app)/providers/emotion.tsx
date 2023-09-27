@@ -6,6 +6,7 @@ import { ReactNode, useState } from "react";
 import { Vazirmatn } from "next/font/google";
 import rtlPlugin from "stylis-plugin-rtl";
 import cookieManager from "@shared/helpers/cookie";
+import { ModalsProvider } from "@mantine/modals";
 
 const vazirmatn = Vazirmatn({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
@@ -42,7 +43,7 @@ export default function EmotionProvider({ children }: { children: ReactNode }): 
           withNormalizeCSS
           emotionCache={rtlCache}
         >
-          {children}
+          <ModalsProvider> {children}</ModalsProvider>
         </MantineProvider>
       </ColorSchemeProvider>
     </CacheProvider>
