@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useState } from "react";
+import React, { ReactNode, useState } from "react";
 import { Select } from "@mantine/core";
 import { IconPlus } from "@tabler/icons-react";
 import { smsLanguage } from "@/shared/i18n/locales/fa";
@@ -15,10 +15,6 @@ const AddTags = (): ReactNode => {
     setSelectedTag("");
   };
 
-  useEffect(() => {
-    console.log({ tags });
-    console.log({ selectedTag });
-  }, [selectedTag]);
   return (
     <>
       {/*todo: duplicate validation*/}
