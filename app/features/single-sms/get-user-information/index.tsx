@@ -20,8 +20,8 @@ const GetUserInformation = (): ReactNode => {
     }
   });
   return (
-    <Grid>
-      <form className="flex flex-row" onSubmit={form.onSubmit(e => console.log(e))}>
+    <form onSubmit={form.onSubmit(e => console.log(e))}>
+      <Grid>
         <Grid.Col span={5}>
           <Select placeholder={smsLanguage.searchSms.id} data={["ads", "otp"]} {...form.getInputProps("id")} />
         </Grid.Col>
@@ -37,8 +37,8 @@ const GetUserInformation = (): ReactNode => {
             <Button type="submit">{smsLanguage.searchSms.search}</Button>
           </Group>
         </Grid.Col>
-      </form>
-    </Grid>
+      </Grid>
+    </form>
   );
 };
 

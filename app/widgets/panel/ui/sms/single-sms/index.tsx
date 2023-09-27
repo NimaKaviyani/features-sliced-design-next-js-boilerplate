@@ -1,6 +1,6 @@
 "use client";
 import React, { ReactNode } from "react";
-import { Grid } from "@mantine/core";
+import { Grid, Group } from "@mantine/core";
 import AddTags from "@/features/single-sms/add-tags";
 import LabelInput from "@/entities/single-sms/ui/label";
 import Tags from "@entities/single-sms/ui/tags";
@@ -8,30 +8,22 @@ import TextArea from "@entities/single-sms/ui/textarea";
 
 const SingleSmsWidget = (): ReactNode => {
   return (
-    <Grid>
-      <form className="flex flex-row">
+    <form>
+      <Grid className="flex flex-col">
         <Grid.Col span={12}>
-          <Grid>
-            <Grid.Col span={6}>
-              <LabelInput />
-            </Grid.Col>
-            <Grid.Col span={6}>
-              <AddTags />
-            </Grid.Col>
-          </Grid>
-          <Grid>
-            <Grid.Col className="mt-3" span={12}>
-              <Tags />
-            </Grid.Col>
-          </Grid>
-          <Grid>
-            <Grid.Col span={12}>
-              <TextArea />
-            </Grid.Col>
-          </Grid>
+          <Group>
+            <LabelInput />
+            <AddTags />
+          </Group>
         </Grid.Col>
-      </form>
-    </Grid>
+        <Grid.Col span={12}>
+          <Tags />
+        </Grid.Col>
+        <Grid.Col span={6}>
+          <TextArea />
+        </Grid.Col>
+      </Grid>
+    </form>
   );
 };
 
