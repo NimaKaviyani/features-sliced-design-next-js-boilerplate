@@ -16,10 +16,8 @@ const SingleSmsWidget = (): ReactNode => {
             <AddTags />
           </Group>
         </Grid.Col>
-        <Grid.Col span={12}>
-          <Tags />
-        </Grid.Col>
-        <Grid.Col span={6}>
+        <Tags />
+        <Grid.Col span={6} xs={12} md={8} lg={6}>
           <TextArea />
         </Grid.Col>
       </Grid>
