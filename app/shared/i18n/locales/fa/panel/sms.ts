@@ -20,6 +20,9 @@ export const smsLanguage = {
   sendSms: {
     title: "موضوع",
     tagLabel: "افزودن تگ های پیام",
+    errorTag: "حد مجاز افزودن به پایان رسیده است!",
+    messageLang: "نوع پیام",
+    textCharacterSms: "تعداد کاراکتر های پیامک",
     textAreaPlaceholder: "متن خود را وارد نمایید"
   }
 };
