@@ -1,9 +1,10 @@
 import React, { ReactNode } from "react";
-import { useTags } from "@shared/state-management/tags";
+import { useSingleSMS } from "@shared/state-management/tags";
 import { Badge, Grid } from "@mantine/core";
 
 const Tags = (): ReactNode => {
-  const tags = useTags(state => state.tags);
+  const tags = useSingleSMS(state => state.singleSMS.tags);
+  console.log(tags)
   return (
     <Grid.Col span={12} hidden={tags.length === 0}>
       {tags.map((items: string, key: number) => (
