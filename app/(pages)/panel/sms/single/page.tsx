@@ -2,10 +2,13 @@
 import React, { ReactNode } from "react";
 import { Grid, Divider } from "@mantine/core";
 import GetUserInformation from "@/features/get-user-information";
-import UserInformation from "@/widgets/panel/ui/user-information";
+import UserInformation from "@/widgets/panel/ui/sms/user-information";
 import SingleSmsWidget from "@/widgets/panel/ui/sms/single-sms";
+import { useGetInformation } from "@/shared/state-management/single-sms-store";
 
 const SingleSms = (): ReactNode => {
+    const userInfo = useGetInformation(state => state);
+
   return (
     <Grid>
       <Grid.Col>
@@ -18,9 +21,15 @@ const SingleSms = (): ReactNode => {
       <Grid.Col>
         <UserInformation />
       </Grid.Col>
-      <Grid.Col>
-        <SingleSmsWidget />
-      </Grid.Col>
+      {
+        userInfo.phoneNumber && userInfo.id ? (
+          <Grid.Col>
+          <SingleSmsWidget />
+        </Grid.Col>
+      
+        ) :null
+
+      }
     </Grid>
   );
 };
