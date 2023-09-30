@@ -4,7 +4,7 @@ import { Grid, Divider } from "@mantine/core";
 import GetUserInformation from "@/features/get-user-information";
 import UserInformation from "@/widgets/panel/ui/sms/user-information";
 import SingleSmsWidget from "@/widgets/panel/ui/sms/single-sms";
-import { useGetInformation } from "@/shared/state-management/single-sms-store";
+import { useGetInformation } from "@/shared/state-management/single-sms";
 
 const SingleSms = (): ReactNode => {
     const userInfo = useGetInformation(state => state);

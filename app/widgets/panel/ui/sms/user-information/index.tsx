@@ -1,7 +1,7 @@
 import { Grid } from "@mantine/core";
 import React, { ReactNode } from "react";
 import { smsLanguage } from "@/shared/i18n/locales/fa";
-import { useGetInformation } from "@/shared/state-management/single-sms-store";
+import { useGetInformation } from "@/shared/state-management/single-sms";
 
 const UserInformation = (): ReactNode => {
   const userInfo = useGetInformation(state => state);

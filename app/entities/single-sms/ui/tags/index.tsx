@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { useTag } from "@shared/state-management/single-sms-store";
+import { useTag } from "@/shared/state-management/single-sms";
 import { Badge, Grid } from "@mantine/core";
 
 const Tags = (): ReactNode => {

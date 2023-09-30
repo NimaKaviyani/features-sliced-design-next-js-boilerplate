@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import { useForm } from "@mantine/form";
 import { smsLanguage } from "@shared/i18n/locales/fa";
 import { Button, Select, Group, TextInput, Grid } from "@mantine/core";
-import { useGetInformation } from "@/shared/state-management/single-sms-store";
+import { useGetInformation } from "@/shared/state-management/single-sms";
 
 const GetUserInformation = (): ReactNode => {
   const phoneRegex = /^09[0-9]{9}$/;

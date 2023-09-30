@@ -2,7 +2,7 @@ import React, { ReactNode, useState } from "react";
 import { Select } from "@mantine/core";
 import { IconPlus } from "@tabler/icons-react";
 import { smsLanguage } from "@/shared/i18n/locales/fa";
-import { useTag } from "@shared/state-management/single-sms-store";
+import { useTag } from "@/shared/state-management/single-sms";
 
 const AddTags = (): ReactNode => {
   const [selectedTag, setSelectedTag] = useState("");
