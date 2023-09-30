@@ -2,12 +2,12 @@ import React, { ReactNode, useState } from "react";
 import { Select } from "@mantine/core";
 import { IconPlus } from "@tabler/icons-react";
 import { smsLanguage } from "@/shared/i18n/locales/fa";
-import { useSingleSMS } from "@shared/state-management/tags";
+import { useTag } from "@shared/state-management/single-sms-store";
 
 const AddTags = (): ReactNode => {
   const [selectedTag, setSelectedTag] = useState("");
-  const addTag = useSingleSMS(state => state.addTag);
-  const tags = useSingleSMS(state => state.singleSMS.tags);
+  const addTag = useTag(state => state.addTag);
+  const tags = useTag(state => state.tags);
 
   const handleClickTag = (): void => {
     if (!selectedTag || selectedTag.length === 0) return;

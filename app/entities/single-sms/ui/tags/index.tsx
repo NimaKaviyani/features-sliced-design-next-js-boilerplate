@@ -1,14 +1,13 @@
 import React, { ReactNode } from "react";
-import { useSingleSMS } from "@shared/state-management/tags";
+import { useTag } from "@shared/state-management/single-sms-store";
 import { Badge, Grid } from "@mantine/core";
 
 const Tags = (): ReactNode => {
-  const tags = useSingleSMS(state => state.singleSMS.tags);
-  console.log(tags)
+  const tags = useTag(state => state.tags);
   return (
     <Grid.Col span={12} hidden={tags.length === 0}>
       {tags.map((items: string, key: number) => (
-        <Badge className="mx-1 text-center" key={key}>
+        <Badge p={12} ta="center" className="mx-1" key={key}>
           #{items}
         </Badge>
       ))}
