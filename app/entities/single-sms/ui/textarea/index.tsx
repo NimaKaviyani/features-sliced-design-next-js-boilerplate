@@ -25,7 +25,7 @@ const TextArea = (): ReactNode => {
   return (
     <>
       <Textarea
-        error=""
+        error={textSms.length === 0 ? "لطفا متن خود را برای ارسال بنویسید!" : null}
         minRows={10}
         onChange={handleChange}
         required
