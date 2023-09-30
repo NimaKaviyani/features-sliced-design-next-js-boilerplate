@@ -22,7 +22,7 @@ const GetUserInformation = (): ReactNode => {
     }
   });
   return (
-    <form onSubmit={form.onSubmit(e => setUser(e.phoneNumber,e.id))}>
+    <form onSubmit={form.onSubmit(e => setUser(e.phoneNumber, e.id))}>
       <Grid>
         <Grid.Col xs={12} md={4} lg={3}>
           <Select placeholder={smsLanguage.searchSms.id} data={["ads", "otp"]} {...form.getInputProps("id")} />

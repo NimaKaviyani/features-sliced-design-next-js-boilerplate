@@ -9,7 +9,6 @@ import Reject from "@/features/single-sms/reject";
 import Send from "@/features/single-sms/send";
 
 const SingleSmsWidget = (): ReactNode => {
-  
   return (
     <form>
       <Grid>
@@ -29,8 +28,8 @@ const SingleSmsWidget = (): ReactNode => {
         </Grid.Col>
         <Grid.Col className="flex justify-end items-end" xs={12} md={4} lg={6}>
           <Group>
-            <Reject/>
-            <Send/>
+            <Reject />
+            <Send />
           </Group>
         </Grid.Col>
       </Grid>

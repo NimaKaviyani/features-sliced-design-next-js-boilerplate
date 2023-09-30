@@ -7,7 +7,7 @@ import SingleSmsWidget from "@/widgets/panel/ui/sms/single-sms";
 import { useGetInformation } from "@/shared/state-management/single-sms";
 
 const SingleSms = (): ReactNode => {
-    const userInfo = useGetInformation(state => state);
+  const userInfo = useGetInformation(state => state);
 
   return (
     <Grid>
@@ -21,15 +21,11 @@ const SingleSms = (): ReactNode => {
       <Grid.Col>
         <UserInformation />
       </Grid.Col>
-      {
-        userInfo.phoneNumber && userInfo.id ? (
-          <Grid.Col>
+      {userInfo.phoneNumber && userInfo.id ? (
+        <Grid.Col>
           <SingleSmsWidget />
         </Grid.Col>
-      
-        ) :null
-
-      }
+      ) : null}
     </Grid>
   );
 };

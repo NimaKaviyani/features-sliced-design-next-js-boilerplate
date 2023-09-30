@@ -18,9 +18,9 @@ export const smsLanguage = {
     sendingChannel: "کانال ارسال"
   },
   sendSms: {
-    send:"ارسال",
+    send: "ارسال",
     title: "موضوع",
-    reject:"انصراف",
+    reject: "انصراف",
     tagLabel: "افزودن تگ های پیام",
     errorTag: "حد مجاز افزودن به پایان رسیده است!",
     messageLang: "نوع پیام",

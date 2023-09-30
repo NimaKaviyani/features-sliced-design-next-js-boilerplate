@@ -20,7 +20,7 @@ const AddTags = (): ReactNode => {
       {/*todo: duplicate validation*/}
       <Select
         placeholder={smsLanguage.sendSms.tagLabel}
-        data={["تگ1", "تگ2", "تگ3","aa","sss","aaaasdas","assdasdasd","ffddd","sasdfl","sadasppoqw"]}
+        data={["تگ1", "تگ2", "تگ3", "aa", "sss", "aaaasdas", "assdasdasd", "ffddd", "sasdfl", "sadasppoqw"]}
         searchable
         error={tags.length === 10 ? smsLanguage.sendSms.errorTag : null}
         disabled={tags.length > 9}

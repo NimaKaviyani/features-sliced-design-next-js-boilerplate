@@ -6,20 +6,20 @@ import { useGetInformation } from "@/shared/state-management/single-sms";
 const UserInformation = (): ReactNode => {
   const userInfo = useGetInformation(state => state);
   const checker = userInfo.phoneNumber && userInfo.id;
-  const fakeData ={
-    sendingChannel:"سرور پراکسی شماره ۱",
-    sendPriority : "بالا",
-    providerName : "آتیه داده پرداز",
-    inquiryState : "در حال ارسال",
-    nameContact : "محمد کریمی",
-    smsIdLabel : "اطلاع رسانی سامانه آگاه",
-    customer : "سامانه آگاه",
-    idContact: "198346",
-  }
+  const fakeData = {
+    sendingChannel: "سرور پراکسی شماره ۱",
+    sendPriority: "بالا",
+    providerName: "آتیه داده پرداز",
+    inquiryState: "در حال ارسال",
+    nameContact: "محمد کریمی",
+    smsIdLabel: "اطلاع رسانی سامانه آگاه",
+    customer: "سامانه آگاه",
+    idContact: "198346"
+  };
   return (
     <Grid>
       <Grid.Col span={3}>
-        {smsLanguage.userInfo.nameContact}:  {checker ? fakeData.nameContact : null}
+        {smsLanguage.userInfo.nameContact}: {checker ? fakeData.nameContact : null}
       </Grid.Col>
       <Grid.Col span={3}>
         {smsLanguage.userInfo.idContact}: {checker ? fakeData.idContact : null}
@@ -28,7 +28,7 @@ const UserInformation = (): ReactNode => {
         {smsLanguage.userInfo.smsIdLabel}: {checker ? fakeData.smsIdLabel : null}
       </Grid.Col>
       <Grid.Col span={3}>
-        {smsLanguage.userInfo.customer}: {checker ?fakeData.customer : null}
+        {smsLanguage.userInfo.customer}: {checker ? fakeData.customer : null}
       </Grid.Col>
       <Grid.Col span={3}>
         {smsLanguage.userInfo.sendPriority}: {checker ? fakeData.sendPriority : null}
