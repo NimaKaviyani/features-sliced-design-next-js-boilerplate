@@ -20,13 +20,13 @@ const AddTags = (): ReactNode => {
       {/*todo: duplicate validation*/}
       <Select
         placeholder={smsLanguage.sendSms.tagLabel}
-        data={["تگ1", "تگ2", "تگ3"]}
+        data={["تگ1", "تگ2", "تگ3","aa","sss","aaaasdas","assdasdasd","ffddd","sasdfl","sadasppoqw"]}
         searchable
+        error={tags.length === 10 ? smsLanguage.sendSms.errorTag : null}
         disabled={tags.length > 9}
         onSearchChange={setSelectedTag}
         rightSection={<IconPlus className="cursor-pointer" onClick={handleClickTag} style={{ display: undefined }} />}
       />
-      {tags.length === 10 ? <p className="text-[#e03131] text-xs my-2 ">{smsLanguage.sendSms.errorTag}</p> : null}
     </>
   );
 };
