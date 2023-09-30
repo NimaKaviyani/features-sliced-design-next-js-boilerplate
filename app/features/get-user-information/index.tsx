@@ -3,9 +3,11 @@ import { ReactNode } from "react";
 import { useForm } from "@mantine/form";
 import { smsLanguage } from "@shared/i18n/locales/fa";
 import { Button, Select, Group, TextInput, Grid } from "@mantine/core";
+import { useGetInformation } from "@/shared/state-management/single-sms-store";
 
 const GetUserInformation = (): ReactNode => {
   const phoneRegex = /^09[0-9]{9}$/;
+  const setUser = useGetInformation(state => state.getUser);
   const form = useForm({
     initialValues: { phoneNumber: "", id: "" },
     // functions will be used to validate values at a corresponding key
@@ -20,7 +22,7 @@ const GetUserInformation = (): ReactNode => {
     }
   });
   return (
-    <form onSubmit={form.onSubmit(e => console.log(e))}>
+    <form onSubmit={form.onSubmit(e => setUser(e.phoneNumber,e.id))}>
       <Grid>
         <Grid.Col xs={12} md={4} lg={3}>
           <Select placeholder={smsLanguage.searchSms.id} data={["ads", "otp"]} {...form.getInputProps("id")} />
