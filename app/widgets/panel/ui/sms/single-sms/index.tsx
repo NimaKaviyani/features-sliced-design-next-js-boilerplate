@@ -17,6 +17,7 @@ const SingleSmsWidget = (): ReactNode => {
           {value === "send" ? smsLanguage.sendSms.messageConfirmModal : smsLanguage.sendSms.messageCancelModal}
         </Text>
       ),
+      centered:true,
       labels: value === "send" ? { confirm: "ارسال", cancel: "خیر" } : { confirm: "بله", cancel: "خیر" },
       onCancel: () => console.log("Cancel"),
       onConfirm: () => console.log("Confirmed")
