@@ -8,8 +8,7 @@ const defaultOptions: ToastOptions = {
   closeOnClick: true,
   pauseOnHover: true,
   draggable: true,
-  progress: undefined,
-  theme: "colored"
+  progress: undefined
 };
 
 const toastAlert: ToastAlertFunction = (message, kind = "info", options) =>
