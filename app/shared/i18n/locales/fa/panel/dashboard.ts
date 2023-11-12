@@ -1,4 +1,5 @@
 export const sidebarLanguage = {
+  panel: "پنل",
   dashboard: "داشبورد",
   subscribe: {
     label: "مشترکین",

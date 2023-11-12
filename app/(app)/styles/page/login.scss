@@ -1,0 +1,17 @@
+.authentication {
+  &-login {
+    max-width: 400px;
+    margin: 0 auto;
+    min-height: 500px;
+    &-box{
+        width: 400px;
+        h1{
+            margin-bottom: 1.25rem;
+            text-align: center;
+        }
+    }
+
+  }
+
+}
+

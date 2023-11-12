@@ -1,0 +1,99 @@
+.subscriber-management {
+  overflow: auto;
+
+  &-list {
+    &-card {
+      border-radius: 1.25rem !important;
+      width: 20.749rem;
+      margin: 1rem auto;
+      height: 12.938rem;
+      border: 1px solid #339af0 !important;
+      box-shadow: 0 4px 14px 0 rgba(47, 83, 109, 0.06) !important;
+      &-header {
+        display: flex;
+        margin: 0 0 1.5rem 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        h1 {
+          font-size: 14px;
+          color: #4e4e53;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 10px;
+          text-transform: capitalize;
+          margin-bottom: 0.8rem;
+        }
+        p {
+          color: #000;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 10px; /* 76.923% */
+          text-transform: capitalize;
+        }
+      }
+      &-wrapper-icon {
+        background-color: #f2f2f2;
+        border-radius: 0.25rem;
+        width: 2rem;
+        height: 1.5rem;
+        padding: 0.2rem;
+        color: #247bc1;
+        cursor: pointer;
+        margin-right: 0.5rem;
+      }
+    }
+
+    &-add-card {
+      width: 20.749rem;
+      margin: 1rem auto;
+      height: 12.938rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1.25rem;
+      border: 1px dashed #989aa3;
+      background: #fff;
+      box-shadow: 0 3px 10px 0 rgba(47, 83, 109, 0.03);
+      transition: 0.3s;
+
+      &-icon {
+        color: #4e4e53;
+      }
+      p {
+        color: #4e4e53;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 13.648px; /* 85.297% */
+        text-transform: capitalize;
+      }
+      &:hover {
+        border-radius: 1.25rem;
+        border: 1px solid #f4f9ff;
+        background: #339af0;
+        box-shadow: 0 4px 14px 0 rgba(47, 83, 109, 0.09);
+        .subscriber-management-list-add-card-icon {
+          color: white !important;
+        }
+        p {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.panel.dark {
+  .subscriber-management {
+
+    &-list {
+      &-card {
+        background: green;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.authentication {
+  &-layout {
+    min-height: 100vh;
+    flex-direction: column;
+
+    .color-toggle {
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .footer-wrapper {
+      margin-top: auto;
+
+      .footer {
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

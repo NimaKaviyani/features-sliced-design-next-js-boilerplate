@@ -1,6 +1,47 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Layouts */
+@import "layout/authentication";
+/* Pages */
+@import "page/login";
+
+/* Entities */
+
+/* Features */
+
+/* Widgets */
+@import "widgets/empty-page";
+@import "widgets/subscriber-list";
+
+/* Global */
+.min-h-screen {
+    min-height: 100vh;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.mantine-MultiSelect-pill {
+    padding-left: 0 !important;
+}
+
+.m-7cda1cd6[data-with-remove] {
+    --_pill-padding-right: 0.5rem !important;
+}
+
+.mantine-InputWrapper-root {
+    position: relative;
+}
+
+.mantine-InputWrapper-error {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    transform: translateY(100%);
+}
+
+.mantine-Breadcrumbs-separator {
+    margin-top: 0.5rem;
+}
 
